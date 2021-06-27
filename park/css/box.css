@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+
+  /* grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px 100px; */
+
+  /* grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px; */
+
+  /* grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 100px 100px; */
+
+ /* 横の軸を作る */
+ /* ｆはpxの後に残った隙間を割合で埋めるもの */
+  grid-template-columns: 100px 1fr 100px;
+  /* 縦の軸を作る */
+  grid-template-rows: 100px 100px;
+
+  /* 図形ごとの余白設定 */
+  /* 全域に対して */
+    gap: 10px;
+    /* 指定する場合 上下、左右 */
+    gap: 10px 40px;
+
+}
+
+.box1 {
+  background: hsl(0, 60%, 60%);
+}
+
+.box2 {
+  background: hsl(60, 60%, 60%);
+}
+
+.box3 {
+  background: hsl(120, 60%, 60%);
+}
+
+.box4 {
+  background: hsl(180, 60%, 60%);
+}
+
+.box5 {
+  background: hsl(240, 60%, 60%);
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/124e42cc69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>おすすめpark紹介</title>
+  </head>
+
+  <body>
+<header>
+  <img src="img/tdl01.jpg" width="200px" height="100px" >
+  <nav>
+    <ul>
+      <li><a href="">トップページへ</a></li>
+      <li><a href="">新規アトラクション</a></li>
+      <li><a href="">最新グッズ</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">紹介記事</a></li>
+    </ul>
+  </nav>
+
+</header>
+<main>
+  <div class="visual">
+    <div class="main1">
+      <img src="img/tdl04.jpg" >
+    </div>
+    <div class="main2">
+      <img src="img/spider01.jpg">
+    </div>
+    <div class="main3">
+      <img src="img/tdl03.jpg">
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 記事articleをつかう -->
+<div class="form">
+  <article>
+    <h1>新規投稿</h1>
+    <label>名前<input type="text"></label>
+    <label>タイトル<input type="text"></label>
+    <label>記事<textarea></textarea></label>
+    <fieldset>
+      <legend>好きなテーマパーク</legend>
+      <label for="place">好きなテーマパーク</label>
+      <select id="place">
+        <option>東京ディズニーランド</option>
+        <option>東京ディズニーシー</option>
+        <option selected>ユニバーサル・スタジオ・ジャパン</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <!-- 送信先のshow.htmlでPOSTで送信する -->
+      <form action="show.html" method="POST">
+        <legend>人気のテーマパーク</legend>
+        <!-- name属性を付けて送り先で分かるようにする -->
+        <label><input type="checkbox" name="parkname">TDL</label>
+        <label><input type="checkbox" checked  name="parkname">TDS</label>
+        <label><input type="checkbox" name="parkname">USJ</label>
+        <button>送信</button>
+      </form>
+      <p><input type="date"></p>
+      <p><input type="number"></p>
+      <p><input type="range"></p>
+      <button><img src="img/mk01.jpg" width="30px" height="30px"></button>
+      <button disabled><img src="img/mk01.jpg" width="30px" height="30px"></button>
+    </fieldset>
+
+    <!-- name属性を付けることで１つだけしか選択できなくできる。 -->
+    <fieldset>
+      <legend>人気のテーマパーク</legend>
+      <label><input type="radio" name="place">TDL</label>
+      <label><input type="radio" name="place" checked >TDS</label>
+      <label><input type="radio" name="place">USJ</label>
+    </fieldset>
+
+  </article>
+
+
+  <article>
+    <h1>記事一覧</h1>
+    <h2>記事タイトル</h2>
+    <p>お知らせです。</p>
+    <p><time>2021-6-21</time>by:kame</p>
+  </article>
+
+  <article>
+    <h2>記事タイトル</h2>
+    <p>お知らせです。</p>
+    <p><time>2021-6-21</time>by:kame</p>
+  </article>
+</div>
+
+  <div class="left">
+    <h3>テーマパーク リンク先</h3>
+    <p>おすすめです。</p>
+    <div class="link">
+      <ul>
+        <li>
+          <div class="pic">
+            <a href="https://www.usj.co.jp/web/ja/jp"><img src="img/usj01.jpg" width="200px" height="100px" >USJ</a>
+          </div>
+          <div class="desc">
+            <p>『ユニバーサル・スタジオ・ジャパンの20周年』
+              NO LIMIT!
+              ユニバーサル・スタジオ・ジャパンの20周年が、ついに開幕！ テーマは、「NO LIMIT!」。超興奮、超感動体験の連続で、ココロとカラダを解き放ち、超元気になろう！
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="pic">
+            <a href="https://www.tokyodisneyresort.jp/"><img src="img/tdl01.jpg" width="200px" height="100px" >東京ディズニーリゾート</a>
+          </div>
+          <div class="desc">
+            <p>＼ハッピーになれるバルーンモチーフのグッズが登場！／ みなさんは、東京ディズニーリゾートでおなじみのカラフルなバルーンをモチーフにしたグッズが続々と登場しているのを知っていますか？ 明日、6月23日から販売の身につけグッズや雑貨をご紹介します！ ＞＞ https://t.co/E43nN6xWKJ https://t.co/GQ42yE4adq</p>
+          </div>
+        </li>
+        <li>
+          <div class="pic">
+            <a href="https://www.universalstudioshollywood.com/web/en/us"><img src="img/ush01.jpg" width="200px" height="100px" >ユニバーサル・スタジオ・ハリウッド</a>
+          </div>
+          <div class="desc">
+            <p>＼ハッピーになれるバルーンモチーフのグッズが登場！／ みなさんは、東京ディズニーリゾートでおなじみのカラフルなバルーンをモチーフにしたグッズが続々と登場しているのを知っていますか？ 明日、6月23日から販売の身につけグッズや雑貨をご紹介します！ ＞＞ https://t.co/E43nN6xWKJ https://t.co/GQ42yE4adq</p>
+          </div>
+        </li>
+        </li>
+        <li>
+          <div class="pic">
+            <a href="https://disneyparks.disney.go.com/jp/disneyland/"><img src="img/cdl01.jpg" width="200px" height="90px" >ディズニー・カリフォルニア・アドベンチャー・パーク. カリフォルニア</a>
+          </div>
+          <div class="desc">
+            <p>ディズニーランド・リゾートの2大テーマパーク、魔法の王国ディズニーランド・パークと、テーマ性に富んだディズニー・カリフォルニア・アドベンチャー・パークは、人々を楽しませる魔法と興奮に満ちています。</p>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="show">
+  <section>
+    <a href="show.html">アトラクションへ</a>
+  </section>
+</div>
+
+<div class="main">
+  <aside>
+    <h2>広告</h2>
+    <div class="box1"><p>ベイマックスのグッズ紹介</p>
+      <div class="box1-1"><img src="img/tdl02.jpg" alt="ベイマックスのグッズ"></div>
+    </div>
+    <p>広告です。</p>
+  </aside>
+</div>
+
+<!-- 最新情報 -->
+<div class="news">
+  <h3>最新情報</h3>
+  <div class="new">
+        <div class="pic">
+          <img src="img/tdl06.jpg" >
+        </div>
+        <div class="desc">
+          <p><strong>【ニュース！】</strong><br> 
+            東京ディズニーランドの「ショーベース」で7月2日よりエンターテイメントプログラム「クラブマウスビート」がスタートします。 ディズニーとピクサーの仲間たちによるクールでエキサイティングでユニークなエンターテイメントにどうぞご期待ください。 ＞＞
+            <ul>
+              <li>
+                <a href="https://www.tokyodisneyresort.jp/tdrblog/detail/pr210622/?utm_source=twitter&utm_medium=social&utm_campaign=210622_pr">
+                  クラブマウスビートとは？</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/TDR_PR/status/1407235706360004612">
+                  Twitterでも紹介中！</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+  </div>
+  <div class="new">
+        <div class="pic">
+          <img src="img/tdl07.jpg"  >
+        </div>
+        <div class="desc">
+          <p><strong>【みなさんの投票で決まった #ディズニーアンバサダーホテル の夏のドリンクは？】</strong><br> 先日Twitterでみなさんに投票していただいた、この夏にディズニーアンバサダーホテルの「ハイピリオン・ラウンジ」でもう一度飲みたいスペシャルドリンクの結果を発表します！ ＞＞
+            <ul>
+              <li>
+                <a href=" https://t.co/4eDkWhoYVf">スペシャルドリンクの結果は？</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/TDR_PR/status/1407511244857241604">Twitterでも紹介中！</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+  </div>
+  <div class="new">
+        <div class="pic">
+          <img src="img/tdl08.jpg" >
+        </div>
+        <div class="desc">
+          <p><strong>＼ハッピーになれるバルーンモチーフのグッズが登場！／</strong><br>
+            みなさんは、東京ディズニーリゾートでおなじみのカラフルなバルーンをモチーフにしたグッズが続々と登場しているのを知っていますか？
+            明日、6月23日から販売の身につけグッズや雑貨をご紹介します！
+            ＞＞
+          <ul>
+            <li>
+              <a href="https://www.tokyodisneyresort.jp/tdrblog/detail/210622/?utm_source=twitter&utm_medium=social&utm_campaign=210622_01">ハッピーになれるバルーンモチーフのグッズが登場とは？</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/TDR_PR/status/1407163954787348483">Twitterでも紹介中！</a>
+            </li>
+          </ul>
+          </p>
+        </div>
+  </div>
+  <div class="new">
+        <div class="pic">
+          <img src="img/tdl09.jpg" >
+        </div>
+        <div class="desc">
+          <p><strong>＼20周年の東京ディズニーシー／</strong><br>
+            心きらめくときがきた！20周年の東京ディズニーシーは、ワクワクするみんなの気持ちがはじけて光り輝く世界に！ディズニーの仲間たちもキラキラと輝く笑顔で皆さんをお迎えします。さあ、いっしょに輝こう！
+            ＞＞
+          <ul>
+            <li>
+              <a href="https://www.tokyodisneyresort.jp/tdrblog/detail/210622/?utm_source=twitter&utm_medium=social&utm_campaign=210622_01">ハッピーになれるバルーンモチーフのグッズが登場とは？</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/TDR_PR/status/1407163954787348483">Twitterでも紹介中！</a>
+            </li>
+          </ul>
+          </p>
+        </div>
+  </div>
+  <div class="new">
+        <div class="pic">
+          <img src="img/usj02.jpg" >
+        </div>
+        <div class="desc">
+          <p><strong>＼#WE ARE MARIO／</strong><br>
+世界中で愛される、あのゲームの世界に入り込んで、マリオのように、体ごと全力で遊ぶ…
+ここは、子どもも大人も誰もが、五感のすべてを解放して、本気で遊べる、世界で唯一の遊び場。合言葉は「#WE ARE MARIO」 さあ、アソビの本能を解き放て！＞＞
+          <ul>
+            <li>
+              <a href="https://www.tokyodisneyresort.jp/tdrblog/detail/210622/?utm_source=twitter&utm_medium=social&utm_campaign=210622_01">ハッピーになれるバルーンモチーフのグッズが登場とは？</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/TDR_PR/status/1407163954787348483">Twitterでも紹介中！</a>
+            </li>
+          </ul>
+          </p>
+        </div>
+  </div>
+</div>
+<!-- 最新情報 -->
+
+</div>
+</div>
+</div>
+<div class="light">light</div>
+
+<div class="spider">
+  <img src="img/spider1.png" >
+</div>
+
+<footer>
+  <a href="#top">先頭へ戻る</a>
+  <a href="show.html">アトラクションへ</a>
+  <a href="box.html">boxへ</a>
+</main>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

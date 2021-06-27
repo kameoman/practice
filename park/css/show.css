@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: cursive;
+}
+
+article{
+  text-align: center;
+  text-decoration: green wavy underline;
+  overflow: scroll;
+}
+
+header {
+  background-color: bisque;
+  height: 300px;
+  border: dashed red;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+header img {
+ margin-left: 450px;
+}
+
+.left {
+  background-color: aqua;
+  border: thick double #32a1ce;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /* 透明度 */
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+.left h3 {
+  color: blue;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+/* 直下のみ＞でできる */
+.left > p {
+  text-align: center;
+}
+
+.left ul li p {
+  color: rgb(212, 128, 54);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.left ul li img {
+  /* 画像の位置調整（文字列での線との調整） */
+  vertical-align: middle;
+  border-radius: 8px;
+}
+
+.left ul {
+  /* リストをスタイリングする方法について */
+  list-style-type: "\1F44D"; // thumbs up sign
+  /* list-style-type
+list-style-position
+list-style-image */
+}
+aside {
+  overflow: scroll;
+  border: 4mm ridge rgba(170, 50, 220, .6);
+}
+.main {
+  background-color:whitesmoke;
+}
+
+.main section img {
+  display: inline-block;
+  width: auto;
+}
+
+main section {
+  display: inline-block;
+}
+
+.new {
+  /* 横詰めになるinline */
+  /* display: inline; */
+  width: 20%;
+  height: 40px;
+  /* inline-blockでサイズの変更ができる */
+  display: inline-block;
+}
+
+.light {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+footer {
+  background-color: violet;
+}

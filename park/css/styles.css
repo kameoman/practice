@@ -1,0 +1,375 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: cursive;
+  /* display: flex; */
+  /* 縦方法に並べる */
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ヘッダー */
+header {
+  background-color: bisque;
+  width: auto;
+  height: 100px;
+  border: dashed red;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  /* position: fixed; */
+  display: flex;
+}
+
+nav {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  display: block;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  background-color: bisque;
+  /* line-height は CSS のプロパティで、行ボックスの高さ */
+  line-height: 80px;
+}
+
+nav a:hover {
+  background-color: blanchedalmond;
+}
+
+nav {
+  /* 左寄せ */
+  margin-left: auto;
+}
+
+.visual {
+  height: 300px;
+  position: relative;
+  background-color: hotpink;
+  display: flex;
+  width: auto;
+}
+
+.visual .main1 {
+  background-color: olivedrab;
+  flex: 1;
+}
+.visual .main2 {
+  background-color: red;
+  flex: 1;
+}
+.visual .main3 {
+  background-color: yellow;
+  flex: 1;
+}
+
+main .main1 img {
+  width: 410px;
+  height: 300px;
+  object-fit: cover;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; */
+  border-radius: 10% / 50%;
+  /* flex-grow: 1; */
+}
+main .main2 img {
+  width: 430px;
+  height: 300px;
+  object-fit: cover;
+  /* 以下で重なりを表示z-indexの値が大きい方が上になる */
+  /* position: absolute;
+  top: 0;
+  left: 300px;
+  z-index: 3; */
+  border-radius: 10% / 50%;
+  /* flex-grow: 1; */
+}
+main .main3 img {
+  object-fit: cover;
+  width: 410px;
+  height: 300px;
+  /* position: absolute;
+  top: 0;
+  left: 600px;
+  z-index: 1; */
+  border-radius: 10% / 50%;
+  /* flex-grow: 0; */
+}
+
+/* 入力フォーム */
+.form {
+  display: flex;
+}
+
+.form article {
+  /* background-color: yellow; */
+  flex: 1;
+}
+
+article {
+  text-align: center;
+  text-decoration: green wavy underline;
+  overflow: scroll;
+}
+
+/* リンク先 */
+.left {
+  background-color: aqua;
+  border: thick double #32a1ce;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /* 透明度 */
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+h1::before,
+h2::before {
+  content: "- ";
+}
+
+h1::after,
+h2::after {
+  content: " -";
+}
+
+p:hover {
+  background-color: gold;
+}
+
+.left h3 {
+  color: blue;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+/* 直下のみ＞でできる */
+.left > p {
+  text-align: center;
+}
+
+.left ul li p {
+  color: rgb(212, 128, 54);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.left ul li img {
+  /* 画像の位置調整（文字列での線との調整） */
+  vertical-align: middle;
+  border-radius: 8px;
+  /* 画像の位置を変更する */
+  /* float: right; */
+}
+
+.left ul {
+  /* リストをスタイリングする方法について */
+  list-style-type: "\1F44D"; // thumbs up sign
+  /* list-style-type
+list-style-position
+list-style-image */
+}
+
+.left {
+  margin: 0;
+}
+
+.left li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.left .pic {
+  margin-right: 30px;
+  text-align: center;
+  width: 200px;
+}
+
+/* 広告 */
+aside {
+  overflow: scroll;
+  border: 4mm ridge rgba(170, 50, 220, 0.6);
+}
+
+aside .box1 {
+  height: 100px;
+  background-color: gold;
+  /* 以下で自分の要素内での子要素の動きを自由にすることができる */
+  position: relative;
+}
+aside .box1-1 {
+  /* 以下で親要素の中で自由に場所の変更ができる */
+  /* 親要素に"position: relative;"が無い場合は全体に対して動いてしまう */
+  position: absolute;
+  width: auto;
+  background-color: green;
+  top: 0px;
+  left: 300px;
+}
+
+/* 新しい情報 */
+.show {
+  height: 300px;
+  background: center/cover rgb(204, 202, 190) url(../img/tdl05.jpg);
+}
+
+.show section {
+  background-color: whitesmoke;
+}
+
+.main {
+  background-color: whitesmoke;
+}
+
+.news {
+  width: auto;
+  background-color: cornsilk;
+  text-align: center;
+}
+
+.news > h3 {
+  font-size: 30px;
+}
+
+.new {
+  /* 横詰めになるinline */
+  /* display: inline; */
+  /* inline-blockでサイズの変更ができる */
+  /* display: inline-block; */
+  /* border: 4mm ridge rgba(253, 243, 225, 0.6); */
+  display: flex;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  margin-left: 300px;
+  margin-right: 300px;
+  justify-content: space-between;
+  /* background-color: cornsilk; */
+}
+
+/* 偶数番目で発生させることができる */
+.new:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.new .pic {
+  /* margin-right: 32px; */
+  object-fit: cover;
+}
+
+.new .pic img {
+  border-radius: 8%;
+  object-fit: cover;
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 400px;
+  height: 350px;
+  transition-property: border-radius,transform ;
+  /* 〇秒間かけて変化する0.3が世間的に使用率が高い */
+  transition-duration: 0.3s;
+  /* 1秒後に発動する */
+  /* transition-delay: 1s; */
+}
+
+.new .desc {
+  /* flex: 1; */
+  width: calc(100% - 180px - 32px);
+}
+
+.new .pic img:hover {
+  border-radius: 50%;
+  /* 傾く */
+  transform: rotate(30deg);
+  /* サイズ変更 */
+  transform: scale(1.2);
+  /* background-color: crimson; */
+}
+
+/* .new .new1 {
+  display: inline-block;
+  width: calc((100% - 40px) / 3);
+  height: 100px;
+  border: solid gray 1px;
+  box-shadow: 1px 0.5px gray;
+  text-shadow: #fc0 1px 0 10px;
+}
+.new .new2 {
+  display: inline-block;
+  width: calc((100% - 40px) / 3);
+  height: 100px;
+  margin: 0 auto;
+  border: solid gray 1px;
+  box-shadow: 1px 0.5px gray;
+  text-shadow: #fc0 1px 0 10px;
+}
+.new .new3 {
+  display: inline-block;
+  width: calc((100% - 40px) / 3);
+  height: 100px;
+  margin-left: auto;
+  border: solid gray 1px;
+  box-shadow: 1px 0.5px gray;
+  text-shadow: 1px 1px 2px gold, 0 0 1em blue, 0 0 0.2em blue;
+} */
+
+/* light */
+.light {
+  /* boxの中で線を記述することができ、サイズwidthなどの変更はしなくていい box-sizing: ; */
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #5b6dcd 10px;
+  padding: 5px;
+}
+
+.spider img{
+  transition-property: border-radius,transform ;
+  transition-duration: 0.3s;
+  /* transition-timing-function: cubic-bezier(0, 0, 0.71, 2.43); */
+}
+
+.spider img {
+  width: 100px;
+  height: 100px;
+}
+
+.spider img:hover {
+  /* transform: translateX(500px); */
+  animation-name: move;
+  animation-duration: 3s;
+  /* アニメーションを遅らせる */
+  /* animation-delay: 1s; */
+  /* アニメーション後維持する */
+  /* animation-fill-mode: forwards; */
+  /* 永遠に繰り返す */
+  animation-iteration-count: infinite;
+  /* アクションを折り返す */
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(500px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(800px) rotate(360deg);
+  }
+}
+
+/* footer */
+footer {
+  background-color: violet;
+}

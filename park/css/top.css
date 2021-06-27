@@ -1,0 +1,212 @@
+body {
+  font-size: 14px;
+  margin: 0;
+}
+
+.container {
+  width: auto;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu li a {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  padding: 8px;
+  color: rgb(136, 131, 131);
+  text-decoration: none;
+  /* 上の左右角を丸める */
+  border-radius: 4px 4px 0 0;
+  justify-content: space-evenly;
+}
+
+.menu li a.active {
+  background-color:#fff;
+}
+
+/* active以外のものに対して付ける */
+.menu li a:not(.active):hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+/* 初期表示をactiveクラスで設定 */
+.content.active {
+  background: #333;
+  color: #fff;
+  /* 最小の高さを設定 */
+  min-height: 150px;
+  /* 指定した物のみ表示する */
+  display: block;
+}
+
+/* activeクラスでないものは表示しない */
+.content {
+  display: none;
+}
+.content2.active2 {
+  background: #333;
+  color: #fff;
+  /* 最小の高さを設定 */
+  min-height: 150px;
+  /* 指定した物のみ表示する */
+  display: block;
+}
+
+/* activeクラスでないものは表示しない */
+.content2 {
+  display: none;
+}
+
+
+
+.top1 ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+}
+
+.top1 ul  li a {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  padding: 8px;
+  color: rgb(136, 131, 131);
+  text-decoration: none;
+  /* 上の左右角を丸める */
+  border-radius: 4px 4px 0 0;
+  justify-content: space-evenly;
+}
+
+.top1 ul li a.active {
+  background-color:#333;
+  color: #fff;
+}
+.top1 ul li a:not(.active):hover {
+  background-color:#333;
+  color: #fff;
+  transition: opacity 0.4;
+}
+
+/* 初期表示をactiveクラスで設定 */
+.top1 .content1.active {
+  background-color: skyblue;
+  color: white;
+  /* 最小の高さを設定 */
+  min-height: 150px;
+  padding: 12px;
+  /* 指定した物のみ表示する */
+  display: block;
+}
+
+.top1 .content1 {
+display: none;
+}
+.top2 ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+}
+
+.top2 ul  li a {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  padding: 8px;
+  color: rgb(136, 131, 131);
+  text-decoration: none;
+  /* 上の左右角を丸める */
+  border-radius: 4px 4px 0 0;
+  justify-content: space-evenly;
+}
+
+.top2 ul li a.active {
+  background-color:#333;
+  color: #fff;
+}
+.top2 ul li a:not(.active):hover {
+  background-color:#333;
+  color: #fff;
+  transition: opacity 0.4;
+}
+
+/* 初期表示をactiveクラスで設定 */
+.top2 .content2.active {
+  background-color: skyblue;
+  color: white;
+  /* 最小の高さを設定 */
+  min-height: 150px;
+  padding: 12px;
+  /* 指定した物のみ表示する */
+  display: block;
+}
+
+.top2 .content2 {
+display: none;
+}
+
+
+.tab{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab li a{
+  display: block;
+  background:#ddd;
+  margin:0 2px;
+  padding:10px 20px;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+  background:#fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;/*はじめは非表示*/
+  opacity: 0;/*透過0*/
+  background: #fff;
+  padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper{
+  width:100%;
+  max-width: 960px;
+  margin:30px auto;
+    background:#fefefe;
+}
+
+.area h2{
+  font-size:1.3rem;
+  margin:0 0 20px 10px;
+}
+
+.area li{
+  padding: 10px; 
+  border-bottom: 1px solid #ddd;
+}
