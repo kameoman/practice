@@ -193,6 +193,10 @@
 
 {
   document.querySelector("button").addEventListener("click", () => {
-    document.getElementById("target").textContent = "change!";
+    const targetNode = document.getElementById("target");
+    targetNode.textContent = "change!";
+    targetNode.title = "This is title!";
+    targetNode.style.color = "white";
+    targetNode.style.backgroundColor = "skyblue";
   });
 }
