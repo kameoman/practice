@@ -191,12 +191,26 @@
 //   setTimeout(update, 1000);
 // }
 
-{
-  document.querySelector("button").addEventListener("click", () => {
-    const targetNode = document.getElementById("target");
-    targetNode.textContent = "change!";
-    targetNode.title = "This is title!";
-    targetNode.style.color = "white";
-    targetNode.style.backgroundColor = "skyblue";
-  });
-}
+// {
+//   document.querySelector("button").addEventListener("click", () => {
+//     const targetNode = document.getElementById("target");
+//     targetNode.textContent = "change!";
+//     targetNode.title = "This is title!";
+//     targetNode.style.color = "white";
+//     targetNode.style.backgroundColor = "skyblue";
+//   });
+// }
+
+// 例外処理の方法eはエラーの意味
+// {
+//   // const name = 'kameo';
+//   const name = 5;
+
+//   try {
+//     console.log(name.toUpperCase());
+//   }catch(e){
+//     console.log(e);
+//   }
+
+//   console.log('Finish');
+// }
