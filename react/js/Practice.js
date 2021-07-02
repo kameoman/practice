@@ -252,12 +252,26 @@
       this.show();
     }
   }
+
+  class SponsoredPost extends Post{ //子クラスとしてextendsで引き継ぐことができる
+    constructor(text,sponsor){
+      super(text); //子クラスでthisを引き継いで使う場合にsuperを使う必要がある
+      this.sponsor = sponsor;
+    }
+
+    show(){
+      super.show();
+      console.log(`...sponsored by ${this.sponsor}`);
+    }
+  }
   const posts = [
     new Post('JavaScriptの勉強中…'),
     new Post('プログラミングが楽しい！'),
+    new SponsoredPost('プログラミングを学ぼう','kamekame'),
   ];
 
   posts[0].like();
+  posts[2].show();
   // // show(posts[1]);
   // posts[0].show();
   // posts[1].show();
