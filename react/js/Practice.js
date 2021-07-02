@@ -214,3 +214,51 @@
 
 //   console.log('Finish');
 // }
+
+// {
+//   const posts = [
+//     {
+//       text: 'JavaScriptの勉強中…',
+//       likeCount: 0,
+//       show(){
+//         console.log(`${this.text} - ${this.likeCount}いいね`);
+//       },
+//     },
+//     {
+//       text: 'プログラミングが楽しい！',
+//       likeCount: 0,
+//       show(){
+//         console.log(`${this.text} - ${this.likeCount}いいね`);
+//       },
+//     },
+//   ];
+
+//   // show(posts[1]);
+//   posts[0].show();
+//   posts[1].show();
+// }
+
+{
+  class Post {
+    constructor(text){
+      this.text = text;
+      this.likeCount = 0;
+    }
+    show(){
+      console.log(`${this.text} - ${this.likeCount}いいね`);
+    }
+    like(){
+      this.likeCount++;
+      this.show();
+    }
+  }
+  const posts = [
+    new Post('JavaScriptの勉強中…'),
+    new Post('プログラミングが楽しい！'),
+  ];
+
+  posts[0].like();
+  // // show(posts[1]);
+  // posts[0].show();
+  // posts[1].show();
+}
