@@ -286,10 +286,77 @@
 //   });
 // }
 
+// {
+//   document.querySelector("button").addEventListener("click", () => {
+//     const targetNode = document.getElementById("target");
+
+//     targetNode.textContent = targetNode.dataset.translation;
+//   });
+// }
+
+// {
+//   document.querySelector("button").addEventListener("click", () => {
+//     const item2 = document.createElement("li");
+//     item2.textContent = "item2";
+
+//     const ul = document.querySelector("ul");
+//     ul.appendChild(item2);
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener("click", () => {
+//     const item0 = document.querySelectorAll('li')[0];
+//     const copy = item0.cloneNode(true); //trueで中のテキストもコピーする
+
+//     const ul = document.querySelector('ul');
+//     const item2 = document.querySelectorAll('li')[2];
+//     ul.insertBefore(copy,item2);
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener("click", () => {
+//     const item1 = document.querySelectorAll('li')[1];
+
+//     // item1.remove();
+//     document.querySelector('ul').removeChild(item1);
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener("click", () => {
+//     const li = document.createElement('li');
+//     const text = document.querySelector('input');
+//     li.textContent = text.value;
+//     document.querySelector('ul').appendChild(li);
+//     text.value = ''; //値をクリアにして
+//     text.focus(); //入力フォームへ自動で移動
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener('click',() => {
+//     const li = document.createElement('li');
+//     const color = document.querySelector('select');
+//     li.textContent = `${color.value} - ${color.selectedIndex}`;
+//     document.querySelector('ul').appendChild(li);
+//   });
+// }
+
+// ラジオボタン
 {
   document.querySelector("button").addEventListener("click", () => {
-    const targetNode = document.getElementById("target");
+    const colors = document.querySelectorAll("input");
+    let selectedColor;
 
-    targetNode.textContent = targetNode.dataset.translation;
+    colors.forEach((color) => {
+      if (color.checked === true) {
+        selectedColor = color.value;
+      }
+    });
+    if (typeof selectedColor === "undefined") {
+      alert("入力されていません");
+      return;
+    }
+    const li = document.createElement("li");
+    li.textContent = selectedColor;
+    document.querySelector("ul").appendChild(li);
   });
 }
