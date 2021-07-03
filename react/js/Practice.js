@@ -207,72 +207,89 @@
 //   const name = 5;
 
 //   try {
-//     console.log(name.toUpperCase());
-//   }catch(e){
-//     console.log(e);
-//   }
+// //     console.log(name.toUpperCase());
+// //   }catch(e){
+// //     console.log(e);
+// //   }
 
-//   console.log('Finish');
-// }
+// //   console.log('Finish');
+// // }
+
+// // {
+// //   const posts = [
+// //     {
+// //       text: 'JavaScriptの勉強中…',
+// //       likeCount: 0,
+// //       show(){
+// //         console.log(`${this.text} - ${this.likeCount}いいね`);
+// //       },
+// //     },
+// //     {
+// //       text: 'プログラミングが楽しい！',
+// //       likeCount: 0,
+// //       show(){
+// //         console.log(`${this.text} - ${this.likeCount}いいね`);
+// //       },
+// //     },
+// //   ];
+
+// //   // show(posts[1]);
+// //   posts[0].show();
+// //   posts[1].show();
+// // }
 
 // {
+//   class Post {
+//     constructor(text){
+//       this.text = text;
+//       this.likeCount = 0;
+//     }
+//     show(){
+//       console.log(`${this.text} - ${this.likeCount}いいね`);
+//     }
+//     like(){
+//       this.likeCount++;
+//       this.show();
+//     }
+//   }
+
+//   class SponsoredPost extends Post{ //子クラスとしてextendsで引き継ぐことができる
+//     constructor(text,sponsor){
+//       super(text); //子クラスでthisを引き継いで使う場合にsuperを使う必要がある
+//       this.sponsor = sponsor;
+//     }
+
+//     show(){
+//       super.show();
+//       console.log(`...sponsored by ${this.sponsor}`);
+//     }
+//   }
 //   const posts = [
-//     {
-//       text: 'JavaScriptの勉強中…',
-//       likeCount: 0,
-//       show(){
-//         console.log(`${this.text} - ${this.likeCount}いいね`);
-//       },
-//     },
-//     {
-//       text: 'プログラミングが楽しい！',
-//       likeCount: 0,
-//       show(){
-//         console.log(`${this.text} - ${this.likeCount}いいね`);
-//       },
-//     },
+//     new Post('JavaScriptの勉強中…'),
+//     new Post('プログラミングが楽しい！'),
+//     new SponsoredPost('プログラミングを学ぼう','kamekame'),
 //   ];
 
-//   // show(posts[1]);
-//   posts[0].show();
-//   posts[1].show();
+//   posts[0].like();
+//   posts[2].show();S
+//   // // show(posts[1]);
+//   // posts[0].show();
+//   // posts[1].show();
+// }
+
+// カスタムデータ属性
+// {
+//   document.querySelector("button").addEventListener("click", () => {
+//     const targetNode = document.getElementById("target");
+
+//     targetNode.textContent = targetNode.dataset.translation;
+//   });
 // }
 
 {
-  class Post {
-    constructor(text){
-      this.text = text;
-      this.likeCount = 0;
-    }
-    show(){
-      console.log(`${this.text} - ${this.likeCount}いいね`);
-    }
-    like(){
-      this.likeCount++;
-      this.show();
-    }
-  }
+  document.querySelector("button").addEventListener("click", () => {
+    const targetNode = document.getElementById("target");
 
-  class SponsoredPost extends Post{ //子クラスとしてextendsで引き継ぐことができる
-    constructor(text,sponsor){
-      super(text); //子クラスでthisを引き継いで使う場合にsuperを使う必要がある
-      this.sponsor = sponsor;
-    }
-
-    show(){
-      super.show();
-      console.log(`...sponsored by ${this.sponsor}`);
-    }
-  }
-  const posts = [
-    new Post('JavaScriptの勉強中…'),
-    new Post('プログラミングが楽しい！'),
-    new SponsoredPost('プログラミングを学ぼう','kamekame'),
-  ];
-
-  posts[0].like();
-  posts[2].show();
-  // // show(posts[1]);
-  // posts[0].show();
-  // posts[1].show();
+    targetNode.textContent = targetNode.dataset.translation;
+  });
 }
