@@ -341,22 +341,92 @@
 // }
 
 // ラジオボタン
-{
-  document.querySelector("button").addEventListener("click", () => {
-    const colors = document.querySelectorAll("input");
-    let selectedColor;
+// {
+//   document.querySelector("button").addEventListener("click", () => {
+//     const colors = document.querySelectorAll("input");
+//     let selectedColor;
 
-    colors.forEach((color) => {
-      if (color.checked === true) {
-        selectedColor = color.value;
-      }
-    });
-    if (typeof selectedColor === "undefined") {
-      alert("入力されていません");
-      return;
+//     colors.forEach((color) => {
+//       if (color.checked === true) {
+//         selectedColor = color.value;
+//       }
+//     });
+//     if (typeof selectedColor === "undefined") {
+//       alert("入力されていません");
+//       return;
+//     }
+//     const li = document.createElement("li");
+//     li.textContent = selectedColor;
+//     document.querySelector("ul").appendChild(li);
+//   });
+// }
+
+// セレクトボックス
+// {
+//   document.querySelector('button').addEventListener('click',() => {
+//     const colors = document.querySelectorAll('input');
+//     const selectedColors = [];
+
+//     colors.forEach(color => {
+//       if(color.checked === true ){
+//         selectedColors.push(color.value);
+//       }
+//     });
+//     if (typeof selectedColor === "undefined"){
+//       alert('入力されていません');
+//       return;
+//     }
+
+//     const li = document.createElement('li');
+//     li.textContent = selectedColors;
+//     document.querySelector('ul').appendChild(li);
+//   })
+// }
+
+// 色んなイベント
+// {
+//   document.querySelector('button').addEventListener('dblclick',() =>{
+//     console.log('Double Clicked!');
+//   });
+//   document.addEventListener('mousemove', e =>{
+//     // console.log('moved!');
+//     console.log(e.clientX, e.clientY);
+//   });
+
+//   document.addEventListener('keypress', e=> {
+//     console.log(e.key);
+//   });
+// }
+
+// {
+//   const text = document.querySelector('textarea');
+//   text.addEventListener('focus',()=>{
+//     console.log('focus');
+//   });
+//   //入力フォームから選択が解除されたときに発動
+//   text.addEventListener('blur',()=>{
+//     console.log('blur');
+//   });
+//   text.addEventListener('change',()=>{
+//     console.log('change');
+//   });
+//   text.addEventListener('input',()=>{
+//     console.log(text.value.length);
+//   });
+// }
+
+// {
+//   document.querySelector('form').addEventListener('submit', e =>{
+//     e.preventDefault();
+//     console.log('submit');
+//     // console.log(formText.value);
+//   })
+// }
+
+{
+  document.querySelector('ul').addEventListener('click', e => {
+    if (e.target.nodeName === 'LI') {
+      e.target.classList.toggle('done');
     }
-    const li = document.createElement("li");
-    li.textContent = selectedColor;
-    document.querySelector("ul").appendChild(li);
   });
 }
