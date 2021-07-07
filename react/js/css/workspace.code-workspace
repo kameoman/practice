@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\..\\MySlotMachine"
+	},
+	{
+		"path": "..\\..\\..\\..\\lesson\\HTML lesson"
+	},
+	{
+		"path": "..\\..\\.."
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}
