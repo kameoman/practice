@@ -1,4 +1,6 @@
 float radius = 150;
+float dPhiStep = 0;
+float dPhiStepVelocity = 0.05;
 
 void setup(){
   size(640, 360, P3D);
@@ -14,7 +16,7 @@ void draw(){
   float lastY = 0;
   float lastZ = 0;
   
-   for (int dTheta = 0, dPhi = 0; dTheta <= 180; dTheta++, dPhi += 10) {
+   for (float dTheta = 0, dPhi = 0; dTheta <= 180; dTheta++, dPhi += dPhiStep) {
     float theta = radians(dTheta);
     float phi = radians(dPhi);
     
@@ -27,11 +29,11 @@ void draw(){
       strokeWeight(1);
       line(lastX,lastY,lastZ,x,y,z);
     }
-    strokeWeight(4);
+    strokeWeight(10);
     point(x,y,z);
     lastX = x;
     lastY = y;
     lastZ = z;
   }
-
+  dPhiStep += dPhiStepVelocity;
 }
