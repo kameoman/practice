@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Map</title>
+    <style>
+      #target {
+        width: 550px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="target"></div>
+    <!-- <ul id="info">
+      <li>ジュラシックパーク</li>
+      <li>セサミストリート</li>
+      <li>スパイダーマンザライド</li>
+    </ul> -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyCVGB-b5ssjvKEmzXCqpfj5wF_AgxHLgmw&callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      function initMap() {
+        "use strict";
+
+        var target = document.getElementById("target");
+        var map;
+        // 以下でlat緯度　lng経度を示している
+        var USJ = { lat: 34.66566258832827, lng: 135.4324562141497 };
+        // var marker;
+        // var infoWindow;
+
+        map = new google.maps.Map(target, {
+          center: USJ,
+          // zoomは最大18段階までで0が世界地図
+          zoom: 15,
+          // clickableIcons: false
+          //   disableDefaultUI: true,
+          // zoomControl: true,
+          // mapTypeId: 'satellite'
+          // mapTypeId: 'hybrid',
+        });
+
+        // クリックした箇所にマーカーを設置、マーカーの緯度経度を取得し表示できる
+        map.addListener('click',function(e){
+          var marker = new google.maps.Marker({
+            position: e.latLng,
+            map: this,
+            animation: google.maps.Animation.DROP
+          });
+          var infoWindow = new google.maps.InfoWindow({
+            content: e.latLng.toString()
+            // content: 'Hello! Hello! Hello! Hello! Hello!'
+          });
+          marker.addListener('click',function(){
+            infoWindow.open(map, marker);
+          });
+        });
+
+        // マーカーの設置（指示箇所に）
+        // marker = new google.maps.Marker({
+        //   position: USJ,
+        //   map: map,
+        //   title: "USJ!",
+        //   icon: {
+        //     url: "icon.png",
+        //     scaledSize: new google.maps.Size(24, 24),
+        //   },
+        //   animation: google.maps.Animation.DROP,
+        // });
+
+        // クリックした場所にマーカーを設置できる
+        // map.addListener("click", function (e) {
+        //   var marker = new google.maps.Marker({
+        //     position: e.latLng,
+        //     map: map,
+        //     title: e.latLng.toString(),
+        //     animation: google.maps.Animation.DROP,
+        //   });
+        //   // クリックしたときにマーカーを削除
+        //   marker.addListener("click", function () {
+        //     this.setMap(null);
+        //   });
+        // });
+
+        // 指定の箇所で情報を表示させる
+        // infoWindow = new google.maps.InfoWindow({
+        //   position: USJ,
+        //   content: document.getElementById('info'),
+        //   maxWidth: 500
+        // });
+        // infoWindow.open(map);
+
+        // クリック時のイベント　eでクリックした情報を得られる
+        // map.addListener('click',function(e){
+        //   console.log(e.latLng.lat());
+        //   console.log(e.latLng.lng());
+        //   console.log(e.latLng.toString());
+        //   // this.setCenter(e.latLng);
+        //   this.panTo(e.latLng);
+        // });
+      }
+    </script>
+  </body>
+</html>
