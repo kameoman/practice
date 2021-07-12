@@ -18,7 +18,7 @@
       <li>スパイダーマンザライド</li>
     </ul> -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyCVGB-b5ssjvKEmzXCqpfj5wF_AgxHLgmw&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key= &callback=initMap"
       async
       defer
     ></script>
@@ -45,17 +45,17 @@
         });
 
         // クリックした箇所にマーカーを設置、マーカーの緯度経度を取得し表示できる
-        map.addListener('click',function(e){
+        map.addListener("click", function (e) {
           var marker = new google.maps.Marker({
             position: e.latLng,
             map: this,
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP,
           });
           var infoWindow = new google.maps.InfoWindow({
-            content: e.latLng.toString()
+            content: e.latLng.toString(),
             // content: 'Hello! Hello! Hello! Hello! Hello!'
           });
-          marker.addListener('click',function(){
+          marker.addListener("click", function () {
             infoWindow.open(map, marker);
           });
         });
